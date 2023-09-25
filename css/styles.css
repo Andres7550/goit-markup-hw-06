@@ -9,6 +9,10 @@
     --bkg-icons-social: rgba(245, 244, 250, 1);
     --bkg-line: (rgba(236, 236, 236, 1));
     --bkg-icon-regular: (rgba(33, 150, 243, 1));
+    --efect-hover-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --efect-bkg-color: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --efect-fill: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --efect-border-color: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 a {
@@ -66,15 +70,6 @@ svg {
     margin: 0 auto;
 }
 
-.icons-social {
-    width: 20px;
-    height: 20px;
-}
-
-.icons-social:hover {
-    fill: var(--bkg-icons-social);
-}
-
 /*ESTILOS HEADER*/
 
 .main-header {
@@ -106,6 +101,7 @@ svg {
 .position-list{
     position: relative;
     overflow: visible;
+    
 }
 
 .header-line {
@@ -118,6 +114,7 @@ svg {
 
 .position-list:hover > .header-line{
     top: 100%;
+    transition: var(--efect-bkg-color);
     background-color: rgba(33,150,243,1);
     overflow: hidden;
 }
@@ -143,12 +140,14 @@ svg {
 }
 
 .header-list-item:hover {
+    transition: var(--efect-bkg-color), var(--efect-bkg-color), var(--efect-fill), var(--efect-hover-color);
     color: var(--link-color-hover);
     background-color: rgb(255, 255, 255);
     font-weight: bold;
 }
 
 .header-list-item:focus {
+    transition: var(--efect-bkg-color), var(--efect-bkg-color), var(--efect-fill);
     color: var(--link-color-hover);
     background-color: rgb(255, 255, 255);
     font-weight: bold;
@@ -201,6 +200,7 @@ svg {
 }
 
 .footer-links:hover {
+    transition: var(--efect-bkg-color),var(--efect-hover-color);
     color: var(--link-color-hover);
     background-color: rgb(47, 48, 58);
     font-weight: bold;
@@ -274,6 +274,7 @@ svg {
 }
 
 .icon-tam:hover {
+    transition: var(--efect-bkg-color);
     background-color: rgba(33, 150, 243, 1);
     border-radius: 50%;
 }
@@ -436,11 +437,13 @@ svg {
 }
 
 .group-input:hover{
+    transition: var(--efect-hover-color),var(--efect-border-color);
     color: rgba(33, 150, 243, 1);
     border-color: rgba(33, 150, 243, 1);
 }
 
 .group-input-comments:hover {
+    transition: var(--efect-hover-color), var(--efect-border-color);
     color: rgba(33, 150, 243, 1);
     border-color: rgba(33, 150, 243, 1);
 }
@@ -632,6 +635,33 @@ svg {
     margin-top: 55px;
 }
 
+.list-dedic{
+    position: relative;
+}
+
+.text-dedic{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 70px;
+    flex-shrink: 0;
+    background: rgba(47, 48, 58, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    opacity: 90%;
+}
+
 /*ESTILOS SECCION NUESTRO EQUIPO*/
 
 .section-equip {
@@ -719,6 +749,7 @@ svg {
 
 .icon-tam:hover {
     /*background-color: #2196F3;*/
+    transition: var(--efect-bkg-color), var(--efect-hover-color);
     background-color: rgba(33, 150, 243, 1);
     color: rgba(255, 255, 255, 1);
     border-radius: 50%;
@@ -764,11 +795,13 @@ svg {
 }
 
 .equip-regular:hover{
+    transition: var(--efect-border-color), var(--efect-hover-color), var(--efect-fill);
     border-color: rgba(33, 150, 243, 1);
     color: rgba(33, 150, 243, 1);
 }
 
 .equip-regular svg:hover{
+    transition: var(--efect-fill),var(--efect-border-color),var(--efect-hover-color);
     fill: rgba(33, 150, 243, 1);
 }
 
@@ -819,6 +852,7 @@ svg {
 }
 
 .btn-main-portafolio:hover {
+    transition: var(--efect-hover-color), var(--efect-bkg-color);
     color: rgb(236, 236, 236);
     background-color: var(--link-color-hover);
 }
@@ -862,6 +896,7 @@ svg {
 }
 
 .card-briefcase:hover {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);;
     box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 

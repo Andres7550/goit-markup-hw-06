@@ -289,17 +289,19 @@ svg {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     display: flex;
     align-items: center;
-    padding-left: 16px;
-    padding-right: 16px;
     margin-top: 20px;
     margin-right: 12px;
+    position: relative;
 }
 
 .text-footer-email{
+    padding-left: 16px;
     background: rgba(33, 150, 243, 0.00);
     font-style: normal;
-    border: none;
     width: 100%;
+    height: 100%;
+    border: none;
+    position: absolute;
 }
 
 .button-footer-div{
@@ -309,11 +311,11 @@ svg {
     margin-top: 108px;
     width: 200px;
     height: 50px;
+    position: relative;
 }
 
 .button-footer{
     width: 50%;
-    height: 50px;
     background: rgba(33, 150, 243, 1);
     color: #FFF;
     text-align: center;
@@ -322,17 +324,15 @@ svg {
     font-style: normal;
     font-weight: 700;
     line-height: 30px;
-    margin-left: 30px;
     letter-spacing: 0.96px;
     border: none;
+    margin-left: 16px;
 }
 
-.prueba{
+.text-button-send{
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    align-items: center;
+    position: absolute;
+    gap: 30px;
 }
 
 /*ESTILOS BODY PAGINA PRINCIPAL*/
@@ -386,6 +386,10 @@ svg {
     margin-right: 40px;
 }
 
+.title-space{
+    margin-bottom: 12px;
+}
+
 .tittle-modal {
     color: rgba(33, 33, 33, 1);
     text-align: center;
@@ -395,10 +399,6 @@ svg {
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0.6px;
-}
-
-.group-order{
-    margin-top: 12px;
 }
 
 .label-model{
@@ -423,7 +423,11 @@ svg {
     position: absolute;
 }
 
-.group-input{
+.input-relative {
+    position: relative;
+}
+
+.group-input {
     width: 448px;
     height: 40px;
     flex-shrink: 0;
@@ -434,12 +438,19 @@ svg {
     padding-left: 14px;
     align-items: center;
     margin-top: 4px;
+    padding-left: 40px;
 }
 
-.group-input:hover{
-    transition: var(--efect-hover-color),var(--efect-border-color);
+.input-relative:hover , .group-input:hover{
+    transition: var(--efect-hover-color), var(--efect-border-color);
     color: rgba(33, 150, 243, 1);
     border-color: rgba(33, 150, 243, 1);
+}
+
+.icon-item{
+    position: absolute;
+    left: 14px;
+    top: 11px;
 }
 
 .group-input-comments:hover {
@@ -448,27 +459,24 @@ svg {
     border-color: rgba(33, 150, 243, 1);
 }
 
-.input-text{
-    width: 100%;
-    font-family: Roboto;
-    font-size: 12px;
-    font-style: normal;
-    border: none;
-}
-
 .group-input-comments{
     width: 448px;
     height: 120px;
     flex-shrink: 0;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.20);
-    padding: 12px 16px;
     margin-top: 4px;
+    position: relative;
+}
+
+.com-space{
+    margin-top: 16px;
 }
 
 .text-area-model{
-    width: 416px;
-    height: 96px;
+    padding: 12px 16px;
+    width: 100%;
+    height: 100%;
     flex-shrink: 0;
     font-family: Roboto;
     font-size: 12px;
@@ -479,6 +487,7 @@ svg {
     scroll-behavior: auto;
     border-color: white;
     resize: none;
+    position: absolute;
 }
 
 .check-model{

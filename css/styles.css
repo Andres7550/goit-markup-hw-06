@@ -528,7 +528,7 @@ svg {
     width: 16px;
     height: 15px;
     position: absolute;
-    opacity: 0;
+    opacity: 0.5;
     visibility: visible;
     fill: #212121;
 }

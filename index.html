@@ -57,10 +57,18 @@
           <textarea class="text-area-model" name="TxtComments" id="user_comments" cols="30" rows="10"
             placeholder="Introduzca texto"></textarea>
         </div>
-        <div class="group-order">
-          <input class="check-model" type="checkbox" name="ChkTerms" id="terms_conditions">
-          <label class="label-model-terms" for="terms_conditions">Estoy de acuerdo con el boletín informativo y acepto
-            los <br>Términos y Condiciones</label>
+        <div class="com-space">
+          <label class="terms check-model">
+            <input hidden class="checkbox" type="checkbox"/>
+            <svg class="checkbox-unchecked">
+              <use href="./images/icons.svg#icon-Vector"></use>
+            </svg>
+            <svg class="checkbox-checked">
+              <use href="./images/icons.svg#icon-cono-revisado"></use>
+            </svg>
+            Estoy de acuerdo con el boletín informativo y acepto los Términos y Condiciones
+          </label>
+         
         </div>
         <button class="button-model" type="submit">Enviar</button>
       </form>
